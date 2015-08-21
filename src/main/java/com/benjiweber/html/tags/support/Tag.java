@@ -1,5 +1,6 @@
 package com.benjiweber.html.tags.support;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.w3c.tidy.Tidy;
 
 import java.io.StringReader;
@@ -22,7 +23,7 @@ public interface Tag {
         return tag(name, "");
     }
     default String tag(String name, String content) {
-        return "<" + name + attributesAsString() + ">" +  content + childrenAsString() + "</" + name + ">";
+        return "<" + name + attributesAsString() + ">" + StringEscapeUtils.escapeHtml(content) + childrenAsString() + "</" + name + ">";
     }
     default String tidy(String html) {
         Tidy tidy = new Tidy();
