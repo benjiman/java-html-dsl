@@ -4,7 +4,6 @@ DSL for writing html in Java
 
 ```java
 
-``t
     public void html_example() {
         String doc =
             html(
