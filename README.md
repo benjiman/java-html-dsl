@@ -1,6 +1,9 @@
 # java-html-dsl
 
+## This won't work in newer versions of Java where parameter name reflection was removed. See https://github.com/benjiman/java-html-dsl2 for another approach.
+
 DSL for writing html in Java http://benjiweber.co.uk/blog/2015/08/21/html-in-java
+
 
 This
 
